@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Small web apps</title>
+<meta name="description" content="Three small web apps: Stiko, Outback and Panorama Splitter. Personal experiments, no claims.">
+<style>
+:root{--bg:#F2F0EB;--surface:#fff;--ink:#1D2328;--muted:#5D6670;--line:#D8D4CC;--accent:#1F6F78;--warn-bg:#FFF4D6;--warn-line:#E2C46B;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#121619;--surface:#1B2125;--ink:#E6EAED;--muted:#9AA5AE;--line:#2E373D;--accent:#5CC3CB;--warn-bg:#2B2614;--warn-line:#7A6524}}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0)}
+.wrap{max-width:820px;margin:0 auto;padding:32px 16px 56px}
+h1{font-size:1.9rem;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+.lead{margin:0;color:var(--muted)}
+a{color:var(--accent)}
+.disclaimer{margin:22px 0 28px;background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:12px;padding:12px 16px}
+.disclaimer p{margin:0}
+.disclaimer p+p{margin-top:6px}
+.app{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;margin-top:16px}
+.app{display:grid;grid-template-columns:1fr 200px;gap:0 22px;align-items:start}
+.app .body{min-width:0}
+.app .title{display:flex;align-items:center;gap:12px}
+.app .title img{width:48px;height:48px;border-radius:12px;flex:none}
+.app h2{margin:0;font-size:1.35rem}
+.shot{display:block;width:200px;border-radius:14px;border:1px solid var(--line);box-shadow:0 6px 18px rgb(0 0 0 / .08)}
+.shot img{display:block;width:100%;height:auto;border-radius:13px}
+@media (max-width:600px){.app{grid-template-columns:1fr}.shot{width:min(240px,100%);margin:14px auto 4px}}
+.app .what{margin:4px 0 14px;color:var(--muted)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
+@media (max-width:600px){.cols{grid-template-columns:1fr}}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 4px}
+ul{margin:0 0 10px;padding-left:18px}
+li{margin:2px 0}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:600}
+.links a.open{background:var(--accent);border-color:transparent;color:var(--bg)}
+footer{margin-top:32px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Small web apps</h1>
+    <p class="lead">Three things I built for myself and a few friends. Each runs in the browser, installs to a phone's home screen and works offline. No accounts, no backend of mine, no analytics: your data stays on your device.</p>
+  </header>
+
+  <div class="disclaimer" role="note">
+    <p><b>No claims.</b> These are personal experiments. I don't claim they are useful, correct or fit for any purpose, and they come with no support or guarantee they'll keep working.</p>
+    <p>Use them at your own risk. Outback is not for navigation or safety decisions, and Stiko is not medical advice.</p>
+  </div>
+
+  <section class="app" id="stiko">
+    <div class="body">
+    <div class="title"><img src="/stiko/icons/icon.svg" alt=""><h2>Stiko</h2></div>
+    <p class="what">Balanced home workouts, demonstrated by Stiko, an animated stick figure.</p>
+    <div class="cols">
+      <div>
+        <h3>Does</h3>
+        <ul>
+          <li>121 exercises: strength, mobility, yoga, tai chi, boxing, sport prep</li>
+          <li>Build, edit and play sessions with timers, rep counts and spoken cues</li>
+          <li>Ready-made starter sessions</li>
+          <li>Share a session as a link; export and import backups</li>
+          <li>English, Bosnian, Croatian, Serbian, German, Spanish, French</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Doesn't</h3>
+        <ul>
+          <li>Give medical or physiotherapy advice</li>
+          <li>Track progress, history or streaks</li>
+          <li>Sync between devices (sessions live on one phone)</li>
+          <li>Use AI or a server at run time</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a class="open" href="/stiko/">Open Stiko</a>
+      <a href="https://github.com/hodzic/stiko">Source</a>
+    </div>
+    </div>
+    <a class="shot" href="/stiko/"><img src="shots/stiko.jpg" width="390" height="844" alt="Stiko demonstrating Warrior II in the exercise player" loading="lazy"></a>
+  </section>
+
+  <section class="app" id="outback">
+    <div class="body">
+    <div class="title"><img src="/outback/icon-192.png" alt=""><h2>Outback</h2></div>
+    <p class="what">Plan a paddle, hike or bike ride while online, then take it offline: route, forecast, maps and tracks on the phone.</p>
+    <div class="cols">
+      <div>
+        <h3>Does</h3>
+        <ul>
+          <li>Draw a route with waypoints, stops and time estimates</li>
+          <li>Day forecast: tides, currents, wind, swell, water temperature, sun and moon</li>
+          <li>Saves maps (chart, street, topo, satellite) for offline use</li>
+          <li>Overlay park PDF maps, with auto-align to the shoreline</li>
+          <li>Live location, AIS ships, a printable 1-page trip sheet, GPX in and out</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Doesn't</h3>
+        <ul>
+          <li>Replace charts, a compass or official forecasts: not for navigation</li>
+          <li>Record your track (import GPX from your watch instead)</li>
+          <li>Work well outside the US: tides and charts come from NOAA, extras are SF Bay Area</li>
+          <li>Sync between devices (use backup files)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a class="open" href="/outback/">Open Outback</a>
+      <a href="https://github.com/hodzic/outback">Source</a>
+    </div>
+    </div>
+    <a class="shot" href="/outback/"><img src="shots/outback.jpg" width="390" height="844" alt="A paddle trip’s day forecast: tides, currents, water, swell, wind, sun and moon" loading="lazy"></a>
+  </section>
+
+  <section class="app" id="photo-splitter">
+    <div class="body">
+    <div class="title"><img src="/photo-splitter/icons/icon-192.png" alt=""><h2>Panorama Splitter</h2></div>
+    <p class="what">Cuts a wide photo into slides that line up seamlessly in an Instagram carousel.</p>
+    <div class="cols">
+      <div>
+        <h3>Does</h3>
+        <ul>
+          <li>2–20 slides, picked automatically from the photo's shape</li>
+          <li>Square 1:1 or portrait 4:5 at 1080 px</li>
+          <li>Crop with a position slider, or fit the whole photo with bars</li>
+          <li>Swipeable preview to check the seams</li>
+          <li>Share sheet on phones, ZIP download on desktop</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Doesn't</h3>
+        <ul>
+          <li>Upload your photos anywhere</li>
+          <li>Post to Instagram for you</li>
+          <li>Edit photos: no filters, colour or straightening</li>
+          <li>Stitch several photos into a panorama</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a class="open" href="/photo-splitter/">Open Panorama Splitter</a>
+      <a href="https://github.com/hodzic/photo-splitter">Source</a>
+    </div>
+    </div>
+    <a class="shot" href="/photo-splitter/"><img src="shots/photo-splitter.jpg" width="390" height="844" alt="A panorama cut into four square slides, with the controls" loading="lazy"></a>
+  </section>
+
+  <footer>Edin Hodzic · <a href="https://github.com/hodzic">GitHub</a></footer>
+</div>
+</body>
+</html>
