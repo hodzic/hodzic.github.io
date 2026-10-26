@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Small web apps</title>
-<meta name="description" content="Three small web apps: Stiko, Outback and Panorama Splitter. Personal experiments, no claims.">
+<meta name="description" content="Four small web apps: Stiko, Outback, Panorama Splitter and MuLoo. Personal experiments, no claims.">
 <style>
 :root{--bg:#F2F0EB;--surface:#fff;--ink:#1D2328;--muted:#5D6670;--line:#D8D4CC;--accent:#1F6F78;--warn-bg:#FFF4D6;--warn-line:#E2C46B;color-scheme:light dark}
 @media (prefers-color-scheme:dark){:root{--bg:#121619;--surface:#1B2125;--ink:#E6EAED;--muted:#9AA5AE;--line:#2E373D;--accent:#5CC3CB;--warn-bg:#2B2614;--warn-line:#7A6524}}
@@ -44,7 +44,7 @@ footer{margin-top:32px;color:var(--muted);font-size:.9rem}
 <div class="wrap">
   <header>
     <h1>Small web apps</h1>
-    <p class="lead">Three things I built for myself and a few friends. Each runs in the browser, installs to a phone's home screen and works offline. No accounts, no backend of mine, no analytics: your data stays on your device.</p>
+    <p class="lead">Four things I built for myself and a few friends. Each runs in the browser, installs to a phone's home screen and works offline. No accounts, no backend of mine, no analytics: your data stays on your device.</p>
   </header>
 
   <div class="disclaimer" role="note">
@@ -149,6 +149,38 @@ footer{margin-top:32px;color:var(--muted);font-size:.9rem}
     </div>
     </div>
     <a class="shot" href="shots/photo-splitter.jpg?v=e3aab813"><img src="shots/photo-splitter.jpg?v=e3aab813" width="390" height="1183" alt="Panorama Splitter with a San Francisco skyline panorama cut into five portrait 4:5 slides: the cut lines, the controls, and the carousel preview on slide 2 of 5, the Bay Bridge" loading="lazy"></a>
+  </section>
+
+  <section class="app" id="muloo">
+    <div class="body">
+    <div class="title"><img src="/muloo/icons/icon-192.png" alt=""><h2>MuLoo</h2></div>
+    <p class="what">A practice kit for guitar and ukulele: tuner, metronome, scrolling scores and a practice recorder.</p>
+    <div class="cols">
+      <div>
+        <h3>Does</h3>
+        <ul>
+          <li>Tuner for guitar and ukulele, plus a beats mode for fine tuning string against string</li>
+          <li>Metronome with tap tempo, subdivisions and a visual-only beat</li>
+          <li>PDF scores that scroll row by row with the metronome, following repeats, D.S. and Coda</li>
+          <li>Record takes with a count-in; loop, slow down, trim and export them as WAV</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Doesn't</h3>
+        <ul>
+          <li>Tune all strings at once from a strum</li>
+          <li>Read the notes: it follows the score at the metronome's tempo, not your playing</li>
+          <li>Record more than one track or video</li>
+          <li>Sync between devices (scores and takes live on one phone)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a class="open" href="/muloo/">Open MuLoo</a>
+      <a href="https://github.com/hodzic/muloo">Source</a>
+    </div>
+    </div>
+    <a class="shot" href="shots/muloo.jpg?v=14ea462e"><img src="shots/muloo.jpg?v=14ea462e" width="390" height="844" alt="MuLoo’s tuner reading A2 at 110.00 Hz, exactly in tune: the gauge panel is green, the needle centred and the A2 string button outlined" loading="lazy"></a>
   </section>
 
   <footer>Edin Hodzic · <a href="https://github.com/hodzic">GitHub</a></footer>
