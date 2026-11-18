@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Small web apps</title>
-<meta name="description" content="Four small web apps: Stiko, Outback, Panorama Splitter and MuLoo. Personal experiments, no claims.">
+<meta name="description" content="Five small web apps: Stiko, Outback, Panorama Splitter, MuLoo and Photo Puzzle. Personal experiments, no claims.">
 <style>
 :root{--bg:#F2F0EB;--surface:#fff;--ink:#1D2328;--muted:#5D6670;--line:#D8D4CC;--accent:#1F6F78;--warn-bg:#FFF4D6;--warn-line:#E2C46B;color-scheme:light dark}
 @media (prefers-color-scheme:dark){:root{--bg:#121619;--surface:#1B2125;--ink:#E6EAED;--muted:#9AA5AE;--line:#2E373D;--accent:#5CC3CB;--warn-bg:#2B2614;--warn-line:#7A6524}}
@@ -44,7 +44,7 @@ footer{margin-top:32px;color:var(--muted);font-size:.9rem}
 <div class="wrap">
   <header>
     <h1>Small web apps</h1>
-    <p class="lead">Four things I built for myself and a few friends. Each runs in the browser, installs to a phone's home screen and works offline. No accounts, no backend of mine, no analytics: your data stays on your device.</p>
+    <p class="lead">Five things I built for myself and a few friends. Each runs in the browser, installs to a phone's home screen and works offline. No accounts, no backend of mine, no analytics: your data stays on your device.</p>
   </header>
 
   <div class="disclaimer" role="note">
@@ -181,6 +181,39 @@ footer{margin-top:32px;color:var(--muted);font-size:.9rem}
     </div>
     </div>
     <a class="shot" href="shots/muloo.jpg?v=390e4204"><img src="shots/muloo.jpg?v=390e4204" width="390" height="844" alt="MuLoo’s tuner reading A2 at 110.00 Hz, exactly in tune: the gauge panel is green, the needle centred and the A2 string button outlined; Guitar, Ukulele and Violin below" loading="lazy"></a>
+  </section>
+
+  <section class="app" id="photo-puzzle">
+    <div class="body">
+    <div class="title"><img src="/photo-puzzle/icons/icon-192.png" alt=""><h2>Photo Puzzle</h2></div>
+    <p class="what">The classic sliding-tile 15 puzzle in any size, with numbers or your own photo, and puzzles you can send as a link.</p>
+    <div class="cols">
+      <div>
+        <h3>Does</h3>
+        <ul>
+          <li>Boards from 2×2 to 8×8, square or not (3×3, 4×5…)</li>
+          <li>Numbered tiles, a photo from your phone, or a photo from a web address</li>
+          <li>Slide a whole row or column at once, or use the arrow keys</li>
+          <li>Share a link: the friend gets the same scrambled picture</li>
+          <li>Every shuffle is solvable</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Doesn't</h3>
+        <ul>
+          <li>Upload your photos: a shared photo travels inside the link, shrunk to fit</li>
+          <li>Open Google Photos album links: it needs the picture's own address</li>
+          <li>Solve the puzzle for you or give hints</li>
+          <li>Keep scores or a history</li>
+        </ul>
+      </div>
+    </div>
+    <div class="links">
+      <a class="open" href="/photo-puzzle/">Open Photo Puzzle</a>
+      <a href="https://github.com/hodzic/photo-puzzle">Source</a>
+    </div>
+    </div>
+    <a class="shot" href="shots/photo-puzzle.jpg?v=5c21e93d"><img src="shots/photo-puzzle.jpg?v=5c21e93d" width="390" height="844" alt="Photo Puzzle on a 4 × 4 board with a sunset photo scrambled into tiles, the gap in the top-right corner, three moves in" loading="lazy"></a>
   </section>
 
   <footer>Edin Hodzic · <a href="https://github.com/hodzic">GitHub</a></footer>
